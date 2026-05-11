@@ -6,18 +6,31 @@
     <title>Esha Sagar | Portfolio</title>
 
     <!-- CSS & Icons -->
+     
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    
+     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- AOS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+        
+        <!-- Typed.js for animated heading -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
 <header class="header">
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand logo" href="#">ESHA SAGAR S</a>
+            <a class="navbar-brand logo" href="#">ESHA SAGAR</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -26,9 +39,12 @@
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#project">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
                     <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#comments">Comments</a></li>
                 </ul>
             </div>
         </div>
@@ -36,161 +52,587 @@
 </header>
 
 <main>
-    <!-- Home Section -->
-    <section id="home" class="home-section d-flex align-items-center justify-content-center text-center">
-        <div class="home-content" data-aos="fade-up">
-            <h1>Hi, I’m <span class="highlight">Esha Sagar</span></h1>
-            <p class="mt-3">Crafting scalable and secure cloud-based web applications with precision and passion.</p>
-            <div class="mt-4">
-                <a href="#contact" class="btn btn-info btn-contact me-3">Let's Connect</a>
-                <a href="Esha Sagar S.pdf" download class="btn btn-outline-light btn-resume">Download Resume</a>
+    <br><br>
+
+    <!-- HOME SECTION -->
+    <section id="home" class="home-section">
+        <div class="container home-container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="home-content">
+                        <span class="greeting">Hello, I'm</span>
+                        <div class="animated-heading">
+                            <span class="gradient-name" id="dynamicName"></span>
+                            <span class="type-cursor"></span>
+                        </div>
+                        <div class="title">Aspiring Web & Cloud Developer</div>
+                        <p class="description">
+                            Final-semester MCA student, with graduation approaching soon. Focused on web development and cloud technologies with a strong learning mindset. Building practical applications to strengthen problem-solving and development skills. Eager to contribute, learn continuously, and grow into a reliable developer.
+                        </p>
+                        <div class="btn-group">
+                            <a href="#contact" class="btn-primary-custom" id="contactBtn">
+                                <i class="fas fa-paper-plane"></i>
+                                Get In Touch
+                            </a>
+                            <a href="Esha Sagar_RESUME.pdf" download class="btn-outline-custom">
+                                <i class="fas fa-download"></i>
+                                Download CV
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="profile-container">
+                        <div class="profile-image-wrapper"><br><br><br>
+                            <img src="profile/profile.png" alt="Esha Sagar" class="profile-image">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="scroll-down mt-5">
-                <a href="#about"><i class="bi bi-chevron-double-down"></i></a>
-            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#about"><i class="bi bi-chevron-double-down"></i></a>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about-section container py-5" style="text-align: center;">
-        <h2 class="section-title text-center" style="text-align: center !important;">About Me</h2>
-        <div class="row align-items-center g-4">
-            <div class="col-md-6" data-aos="fade-right">
-                <div class="about-img-wrapper">
-                    <img src="images/aboutme.avif" alt="About Me" class="about-img img-fluid">
-                </div>
-            </div>
-            <div class="col-md-6" data-aos="fade-left">
-                <div class="about-text p-4">
-                    <h3 class="fw-bold">I'm Esha</h3>
-                    <p>Passionate Web Developer with a strong foundation in front-end and deep curiosity for cloud computing. I love crafting responsive and scalable web applications that make a difference.</p>
-                    <p>Currently pursuing a Master's in Computer Applications. Always learning and eager to contribute to innovative projects using React, Node.js, Python, and cloud platforms.</p>
-                    <ul class="text-start">
-                        <li><i class="fa-solid fa-code text-info"></i> Detail-oriented and efficient in coding</li>
-                        <li><i class="fa-solid fa-brain text-info"></i> Constant learner interested in cloud certifications</li>
-                        <li><i class="fa-solid fa-people-group text-info"></i> Loves team collaboration and tech events</li>
-                    </ul>
-                    <p class="fst-italic text-info">"Building intuitive web applications that make a difference."</p>
+    <section id="about">
+        <div class="container">
+            <div class="about-card" data-aos="fade-up">
+                <div class="light"></div>
+                <div class="light light2"></div>
+                <h2 class="section-title">📖 About Me</h2>
+                <div class="row align-items-center g-5">
+                    <div class="col-md-5 text-center" data-aos="fade-right">
+                        <div class="ratio-9x12" id="aboutImage">
+                            <img src="profile/profile.png" alt="Esha Sagar">
+                        </div>
+                    </div>
+                    <div class="col-md-7 about-text" data-aos="fade-left">
+                        <h3><span id="dynamic-heading"></span></h3>
+                        <p>I'm someone who enjoys exploring different areas of technology and turning ideas into real, working projects. From designing clean user interfaces to understanding how things work behind the scenes, I like being involved in the full process of building.</p>
+                        <p>Currently completed my MCA, I'm continuously learning and experimenting with new tools and technologies. I don't limit myself to just one domain—I enjoy trying, learning, and growing across different areas in tech.</p>
+                        <ul class="list-unstyled mt-4">
+                            <li><i class="fa-solid fa-code"></i> Interested in building practical and meaningful projects</li>
+                            <li><i class="fa-solid fa-lightbulb"></i> Curious mindset with a habit of exploring new technologies</li>
+                            <li><i class="fa-solid fa-users"></i> Comfortable working independently and in teams</li>
+                        </ul>
+                        <div class="quote"><i class="fas fa-quote-left"></i> I believe growth comes from exploring, experimenting, and building without limits.</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills-section container text-center">
-        <h2 class="section-title">Skills</h2>
-        <div class="row mt-4 justify-content-center skills-container">
-            <div class="col-md-6 skills-list d-grid gap-3" data-aos="fade-right">
-                <div><i class="fab fa-html5 me-2 text-warning"></i>HTML5</div>
-                <div><i class="fab fa-css3-alt me-2 text-primary"></i>CSS3</div>
-                <div><i class="fab fa-js me-2 text-warning"></i>JavaScript</div>
-                <div><i class="fab fa-bootstrap me-2 text-purple"></i>Bootstrap</div>
-                <div><i class="fab fa-react me-2 text-info"></i>React JS & Node JS</div>
-                <div><i class="fab fa-python me-2 text-success"></i>Python</div>
-                <div><i class="fab fa-java me-2 text-danger"></i>Java</div>
-                <div><i class="fas fa-database me-2 text-light"></i>MySQL</div>
-            </div>
-            <div class="col-md-6" data-aos="fade-left">
-                <img src="images/skills.avif" alt="Skills" class="skills-img img-fluid">
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">⚙️ Skills & Expertise</h2>
+            <div class="skills-grid-clean">
+                <div class="skill-item-clean" data-aos="fade-up">
+                    <i class="fab fa-html5 skill-icon-clean"></i>
+                    <h4 class="skill-name-clean">HTML5</h4>
+                    <div class="skill-level-clean">
+                        <div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean active"></div>
+                    </div>
+                </div>
+                <div class="skill-item-clean" data-aos="fade-up" data-aos-delay="50">
+                    <i class="fab fa-css3-alt skill-icon-clean"></i>
+                    <h4 class="skill-name-clean">CSS3</h4>
+                    <div class="skill-level-clean">
+                        <div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean active"></div>
+                    </div>
+                </div>
+                <div class="skill-item-clean" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fab fa-js-square skill-icon-clean"></i>
+                    <h4 class="skill-name-clean">JavaScript</h4>
+                    <div class="skill-level-clean">
+                        <div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean"></div><div class="level-dot-clean"></div>
+                    </div>
+                </div>
+                <div class="skill-item-clean" data-aos="fade-up" data-aos-delay="150">
+                    <i class="fab fa-react skill-icon-clean"></i>
+                    <h4 class="skill-name-clean">React</h4>
+                    <div class="skill-level-clean">
+                        <div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean"></div><div class="level-dot-clean"></div><div class="level-dot-clean"></div>
+                    </div>
+                </div>
+                <div class="skill-item-clean" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fab fa-node-js skill-icon-clean"></i>
+                    <h4 class="skill-name-clean">Node.js</h4>
+                    <div class="skill-level-clean">
+                        <div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean"></div><div class="level-dot-clean"></div><div class="level-dot-clean"></div>
+                    </div>
+                </div>
+                <div class="skill-item-clean" data-aos="fade-up" data-aos-delay="250">
+                    <i class="fab fa-python skill-icon-clean"></i>
+                    <h4 class="skill-name-clean">Python</h4>
+                    <div class="skill-level-clean">
+                        <div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean"></div>
+                    </div>
+                </div>
+                <div class="skill-item-clean" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fab fa-java skill-icon-clean"></i>
+                    <h4 class="skill-name-clean">Java</h4>
+                    <div class="skill-level-clean">
+                        <div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean"></div><div class="level-dot-clean"></div>
+                    </div>
+                </div>
+                <div class="skill-item-clean" data-aos="fade-up" data-aos-delay="350">
+                    <i class="fas fa-database skill-icon-clean"></i>
+                    <h4 class="skill-name-clean">MySQL</h4>
+                    <div class="skill-level-clean">
+                        <div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean"></div><div class="level-dot-clean"></div>
+                    </div>
+                </div>
+                <div class="skill-item-clean" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-database skill-icon-clean"></i>
+                    <h4 class="skill-name-clean">MongoDB</h4>
+                    <div class="skill-level-clean">
+                        <div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean"></div><div class="level-dot-clean"></div><div class="level-dot-clean"></div>
+                    </div>
+                </div>
+                <div class="skill-item-clean" data-aos="fade-up" data-aos-delay="450">
+                    <i class="fab fa-aws skill-icon-clean"></i>
+                    <h4 class="skill-name-clean">AWS</h4>
+                    <div class="skill-level-clean">
+                        <div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean"></div><div class="level-dot-clean"></div><div class="level-dot-clean"></div>
+                    </div>
+                </div>
+                <div class="skill-item-clean" data-aos="fade-up" data-aos-delay="500">
+                    <i class="fab fa-docker skill-icon-clean"></i>
+                    <h4 class="skill-name-clean">Docker</h4>
+                    <div class="skill-level-clean">
+                        <div class="level-dot-clean active"></div><div class="level-dot-clean"></div><div class="level-dot-clean"></div><div class="level-dot-clean"></div><div class="level-dot-clean"></div>
+                    </div>
+                </div>
+                <div class="skill-item-clean" data-aos="fade-up" data-aos-delay="550">
+                    <i class="fab fa-github skill-icon-clean"></i>
+                    <h4 class="skill-name-clean">GitHub</h4>
+                    <div class="skill-level-clean">
+                        <div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean"></div><div class="level-dot-clean"></div><div class="level-dot-clean"></div>
+                    </div>
+                </div>
+                <div class="skill-item-clean" data-aos="fade-up" data-aos-delay="600">
+                    <i class="fas fa-comments skill-icon-clean"></i>
+                    <h4 class="skill-name-clean">Communication</h4>
+                    <div class="skill-level-clean">
+                        <div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean active"></div>
+                    </div>
+                </div>
+                <div class="skill-item-clean" data-aos="fade-up" data-aos-delay="650">
+                    <i class="fas fa-lightbulb skill-icon-clean"></i>
+                    <h4 class="skill-name-clean">Problem Solving</h4>
+                    <div class="skill-level-clean">
+                        <div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean active"></div>
+                    </div>
+                </div>
+                <div class="skill-item-clean" data-aos="fade-up" data-aos-delay="700">
+                    <i class="fas fa-people-group skill-icon-clean"></i>
+                    <h4 class="skill-name-clean">Team Collaboration</h4>
+                    <div class="skill-level-clean">
+                        <div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean active"></div>
+                    </div>
+                </div>
+                <div class="skill-item-clean" data-aos="fade-up" data-aos-delay="750">
+                    <i class="fas fa-clock skill-icon-clean"></i>
+                    <h4 class="skill-name-clean">Time Management</h4>
+                    <div class="skill-level-clean">
+                        <div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean active"></div>
+                    </div>
+                </div>
+                <div class="skill-item-clean" data-aos="fade-up" data-aos-delay="800">
+                    <i class="fas fa-flag skill-icon-clean"></i>
+                    <h4 class="skill-name-clean">Leadership</h4>
+                    <div class="skill-level-clean">
+                        <div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean"></div>
+                    </div>
+                </div>
+                <div class="skill-item-clean" data-aos="fade-up" data-aos-delay="850">
+                    <i class="fas fa-arrows-rotate skill-icon-clean"></i>
+                    <h4 class="skill-name-clean">Adaptability</h4>
+                    <div class="skill-level-clean">
+                        <div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean active"></div><div class="level-dot-clean active"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Project Section -->
-    <section id="project" class="project-section container text-center">
-        <h2 class="section-title">Projects</h2>
-        <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
-            <div class="col">
-                <div class="card project-card h-100 text-start">
-                    <img src="images/project.webp" class="card-img-top project-img" alt="Income Tax Fraud Detection">
-                    <div class="card-body">
-                        <h5 class="card-title">Income Tax Fraud Detection</h5>
-                        <p class="card-text">Machine Learning-based detection of corporate tax frauds using financial data. Improves accuracy and adapts to evolving patterns.</p>
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="main-title">⚡Featured Projects</h2>
+            </div>
+            <div class="row g-4">
+
+                <!-- PROJECT 1 -->
+                <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in">
+                    <div class="modern-project-card">
+                        <div class="project-image">
+                            <img src="project/Calculator.png" alt="">
+                            <div class="project-overlay">
+                                <button class="view-btn"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#projectModal"
+                                    data-title="Advanced Scientific Calculator"
+                                    data-desc="A modern, fully responsive Advanced Scientific Calculator web app featuring scientific functions, dark/light mode, glassmorphism UI, calculation history, keyboard support, smooth animations, and robust JavaScript-powered functionality. NOTE : Best viewed at 60–80% browser zoom for an optimized desktop experience."
+                                    data-tech="HTML,CSS3,Bootstrap,JavaScript"
+                                    data-link="https://github.com/EshaSagarS310/Calculator">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span>HTML</span><span>CSS3</span><span>Bootstrap</span><span>JavaScript</span>
+                            </div>
+                            <h4>Advanced Calculator</h4>
+                            <p>Modern responsive Calculator with Glassmorphism UI, Dark/Light mode, scientific functions, keyboard support, history, and smooth animations — optimized for 60–80% browser zoom on desktop.</p>
+                            <div class="project-footer">
+                                <a href="#" class="explore-btn project-link" target="_blank">
+                                    Explore Project <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card project-card h-100 text-start">
-                    <img src="images/pro.jpg" class="card-img-top project-img" alt="Smart Hotel Entry">
-                    <div class="card-body">
-                        <h5 class="card-title">Zero Touch Hotel – Smart Entry and Exit</h5>
-                        <p class="card-text">A touchless hotel system using QR code & device registration to improve hygiene, guest experience, and efficiency.</p>
+
+                <!-- PROJECT 2 -->
+                <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="modern-project-card">
+                        <div class="project-image">
+                            <img src="project/Music Player.png" alt="">
+                            <div class="project-overlay">
+                                <button class="view-btn"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#projectModal"
+                                    data-title="PulseBeat — Music Streaming App"
+                                    data-desc="PulseBeat is a modern frontend music streaming web app inspired by Spotify, featuring a glassmorphism neon UI, advanced music controls, playlists, favorites, live search, responsive design, and smooth animations — all powered entirely on the frontend using LocalStorage and static JSON data."
+                                    data-tech="HTML,CSS3,Bootstrap,JavaScript"
+                                    data-link="https://github.com/EshaSagarS310/Music-Player">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span>HTML</span><span>CSS3</span><span>Bootstrap</span><span>JavaScript</span>
+                            </div>
+                            <h4>PulseBeat — Music App</h4>
+                            <p>PulseBeat is a futuristic frontend-only music streaming web app with a modern glassmorphism UI, advanced music player, playlists, favorites, live search, and a fully responsive design for a premium user experience.</p>
+                            <div class="project-footer">
+                                <a href="#" class="explore-btn project-link" target="_blank">
+                                    Explore Project <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <!-- PROJECT 3 -->
+                <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="modern-project-card">
+                        <div class="project-image">
+                            <img src="project/Tax Farud Dashboard.png" alt="">
+                            <div class="project-overlay">
+                                <button class="view-btn"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#projectModal"
+                                    data-title="Corporate Income Tax Fraud Detection Dashboard"
+                                    data-desc="An intelligent ML-powered analytics platform built with Python and Streamlit to detect potential corporate tax fraud through secure authentication, data preprocessing, predictive modeling, interactive visualizations, KPI analytics, and automated report generation."
+                                    data-tech="Python, Streamlit, Pandas, NumPy, Scikit-learn, XGBoost, Plotly, Matplotlib, Seaborn, ReportLab, Random Forest, Logistic Regression, Machine Learning"
+                                    data-link="https://github.com/EshaSagarS310/Corporate-Income-Tax-Fraud-Detection">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span>Python</span><span>Streamlit</span><span>Machine Learning</span>
+                            </div>
+                            <h4>Tax Fraud Dashboard</h4>
+                            <p>ML-powered fraud detection dashboard built with Python and Streamlit for analyzing corporate financial data, predicting tax fraud, and generating interactive analytics reports.</p>
+                            <div class="project-footer">
+                                <a href="#" class="explore-btn project-link" target="_blank">
+                                    Explore Project <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 4 -->
+                <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="modern-project-card">
+                        <div class="project-image">
+                            <img src="project/Zero Touch Hotel.png" alt="">
+                            <div class="project-overlay">
+                                <button class="view-btn"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#projectModal"
+                                    data-title="Zero Touch Hotel – Smart Entry & Exit System"
+                                    data-desc="This project presents a smart contactless hotel management system that automates guest entry and exit processes using digital technologies. It allows users to book rooms online, upload identification documents, make payments, and access rooms through QR-code-based authentication without depending on manual reception procedures. The system improves efficiency, reduces waiting time and human errors, and provides a safer and more convenient experience for both guests and hotel staff through centralized digital management."
+                                    data-tech="HTML,CSS,JavaScript,PHP,MySQL,XAMPP,Apache HTTP Server,QR Code Generator,UPI Gateway,phpMyAdmin"
+                                    data-link="https://github.com/EshaSagarS310/Zero-Touch-Hotel-Smart-Entry-Exit-System">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>XAMPP</span><span>Apache</span>
+                            </div>
+                            <h4>ZERO TOUCH HOTEL</h4>
+                            <p>This project develops a smart contactless hotel management system that automates booking, payment, and room access using digital technologies and QR-code authentication.</p>
+                            <div class="project-footer">
+                                <a href="#" class="explore-btn project-link" target="_blank">
+                                    Explore Project <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+        </div>
+    </section>
+
+    <!-- PROJECT MODAL -->
+    <div class="modal fade" id="projectModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content custom-modal">
+                <div class="modal-header border-0">
+                    <h3 class="modal-title" id="modalTitle"></h3>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="modalDesc"></p>
+                    <div class="tech-stack mt-4">
+                        <h6>Technologies Used</h6>
+                        <div id="modalTech"></div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+                    <a href="#" target="_blank" id="modalLink" class="github-btn">
+                        View Github <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">💼 Work Experience</h2>
+            <div class="exp-grid">
+                <div class="exp-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="exp-icon"><i class="fas fa-code"></i></div>
+                    <div class="exp-role">Frontend Development Internship</div>
+                    <div class="exp-company"><i class="fas fa-building"></i> CodeAlpha</div>
+                    <div class="exp-duration"><i class="far fa-calendar-alt"></i> 20 June 2025 - 20 July 2025</div>
+                    <div class="exp-description">
+                        <ul>
+                            <li>Completed a 1-month Virtual Internship as a Frontend Developer.</li>
+                            <li>Built web projects including a Calculator, Portfolio Website, and Music Player.</li>
+                            <li>Used HTML, CSS, and JavaScript for development.</li>
+                            <li>Created responsive and well-structured web interfaces.</li>
+                            <li>Improved frontend development skills and coding practices.</li>
+                        </ul>
+                    </div>
+                    <div class="exp-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bootstrap</span></div>
+                </div>
+                <div class="exp-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="exp-icon"><i class="fas fa-chalkboard-user"></i></div>
+                    <div class="exp-role">AI/ML Research Internship</div>
+                    <div class="exp-company"><i class="fas fa-university"></i> Hindustan Institute of Science and Technology</div>
+                    <div class="exp-duration"><i class="far fa-calendar-alt"></i> 05 August 2025 - 05 September 2025</div>
+                    <div class="exp-description">
+                        <ul>
+                            <li>Developed a web-based fraud detection dashboard using Streamlit.</li>
+                            <li>Implemented machine learning models (Random Forest, Logistic Regression, XGBoost).</li>
+                            <li>Performed data preprocessing, analysis, and visualization of corporate tax data.</li>
+                            <li>Generated insights with charts, reports, and export features (CSV/PDF).</li>
+                        </ul>
+                    </div>
+                    <div class="exp-tech"><span>Python</span><span>Machine Learning</span><span>Streamlit</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates">
+        <div class="container certificates-section">
+            <h2 class="section-title" data-aos="fade-up">📜 Certifications & Achievements</h2>
+            <div class="cert-grid" id="certificatesGrid" data-aos="fade-up"></div>
+            <div class="footer-note">
+                <i class="fas fa-certificate"></i> Click on any certificate to view full image — all credentials verified.
+            </div>
+        </div>
+        <div id="lightboxModal" class="lightbox">
+            <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+            <img class="lightbox-img" id="lightboxImage" alt="certificate preview">
         </div>
     </section>
 
     <!-- Education Section -->
-      <!-- Education Section (Timeline Style) -->
-<section id="education" class="education-section container py-5">
-    <h2 class="section-title text-center">Education</h2>
-    <div class="timeline">
-        <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-icon bg-info"><i class="fas fa-user-graduate"></i></div>
-            <div class="timeline-content">
-                <h5>Master of Computer Application</h5>
-                <p>Hindustan Institute Of Technology And Science</p>
-                <small>Pursuing | 9.61 CGPA<br>Expected Graduation: 2026</small>
+    <section id="education" class="education-section">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">🎓 Education Journey</h2>
+            <div class="education-grid">
+                <div class="education-card" data-aos="fade-up">
+                    <div class="education-icon"><i class="fas fa-user-graduate"></i></div>
+                    <h3 class="education-degree">Master of Computer Applications</h3>
+                    <p class="education-institution">Hindustan Institute Of Technology And Science</p>
+                    <div class="education-details">Specialized in Cloud Computing, focusing on scalable Applications, Deployment, and Modern Web Development.</div>
+                    <div class="education-year">2024 - 2026</div>
+                    <div class="education-progress"><div class="progress"><div class="progress-bar" style="width: 97%"></div></div><div class="progress-text">Current CGPA: 9.72</div></div>
+                </div>
+                <div class="education-card" data-aos="fade-up" data-aos-delay="50">
+                    <div class="education-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3 class="education-degree">Bachelor of Computer Applications</h3>
+                    <p class="education-institution">R.B. Gothi Jain College for Women (Affiliated Madras University)</p>
+                    <div class="education-details">Built a strong foundation in Programming, Databases, and Core Computer Science principles.</div>
+                    <div class="education-year">2021 - 2024</div>
+                    <div class="education-progress"><div class="progress"><div class="progress-bar" style="width: 87%"></div></div><div class="progress-text">Final CGPA: 8.7</div></div>
+                </div>
+                <div class="education-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="education-icon"><i class="fas fa-school"></i></div>
+                    <h3 class="education-degree">Higher Secondary Education (12th Grade)</h3>
+                    <p class="education-institution">Uttar Pradesh State Board | Sri Jay Narayan Inter College, Ballia</p>
+                    <div class="education-details">Stream: Physics, Chemistry & Mathematics (PCM). Developed strong analytical and problem-solving skills.</div>
+                    <div class="education-year">2020 - 2021</div>
+                    <div class="education-progress"><div class="progress"><div class="progress-bar" style="width: 75.6%"></div></div><div class="progress-text">Percentage: 75.6%</div></div>
+                </div>
+                <div class="education-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="education-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3 class="education-degree">Secondary School Education (10th Grade)</h3>
+                    <p class="education-institution">Uttar Pradesh State Board | Sri Jay Narayan Inter College, Ballia</p>
+                    <div class="education-details">Successfully completed secondary education under UP Board. Developed a solid base in Science and Mathematics.</div>
+                    <div class="education-year">2018 - 2019</div>
+                    <div class="education-progress"><div class="progress"><div class="progress-bar" style="width: 72.5%"></div></div><div class="progress-text">Percentage: 72.5%</div></div>
+                </div>
             </div>
         </div>
-
-        <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
-            <div class="timeline-icon bg-success"><i class="fas fa-laptop-code"></i></div>
-            <div class="timeline-content">
-                <h5>Bachelor of Computer Application</h5>
-                <p>R.B. Gothi Jain College for Women</p>
-                <small>Graduated | 8.9 CGPA | 2024</small>
-            </div>
-        </div>
-
-        <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-            <div class="timeline-icon bg-warning"><i class="fas fa-school"></i></div>
-            <div class="timeline-content">
-                <h5>12th Grade</h5>
-                <p>Sri Jay Narayan Inter College, UP</p>
-                <small>75.6% | 2021</small>
-            </div>
-        </div>
-
-        <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
-            <div class="timeline-icon bg-danger"><i class="fas fa-book-reader"></i></div>
-            <div class="timeline-content">
-                <h5>10th Grade</h5>
-                <p>Sri Jay Narayan Inter College, UP</p>
-                <small>72.5% | 2019</small>
-            </div>
-        </div>
-    </div>
-</section>
-
-   
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section container text-center">
-        <h2 class="section-title">Contact</h2>
-        <form class="contact-form mt-4">
-            <div class="mb-3">
-                <input type="text" class="form-control" placeholder="Name" required>
-            </div>
-            <div class="mb-3">
-                <input type="email" class="form-control" placeholder="Email" required>
-            </div>
-            <div class="mb-3">
-                <textarea class="form-control" placeholder="Your message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-submit">Send</button>
-        </form>
     </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container contact-container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">📬 Get In Touch</h2>
+            <div class="contact-card">
+                <div class="row">
+                    <div class="col-lg-5 contact-info" data-aos="fade-right">
+                        <h4>Let's Connect</h4>
+                        <p>I'm always open to discussing new opportunities, creative ideas, or just having a friendly chat about technology.</p>
+                        <div class="contact-method">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-details"><h5>Email</h5><p>eshasagar3124@gmail.com</p></div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div class="contact-details"><h5>Phone</h5><p>+91 93633 330945</p></div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-details"><h5>Location</h5><p>Chennai, Tamil Nadu</p></div>
+                        </div>
+                        <div class="social-links">&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="https://www.linkedin.com/in/esha-s-457a5325a/" class="social-link"><i class="fab fa-linkedin-in"></i></a>&nbsp;&nbsp;&nbsp;
+                            <a href="https://github.com/EshaSagarS310" class="social-link"><i class="fab fa-github"></i></a>&nbsp; &nbsp;&nbsp;
+                            <a href="https://www.instagram.com/nexyra212?igsh=ZXhveXJobmoyNzgw" class="social-link"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 contact-form-wrapper" data-aos="fade-left">
+                        <form class="contact-form" name="contact" method="POST" data-netlify="true">
+                            <input type="hidden" name="form-name" value="contact">
+
+                            <div class="form-group">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" name="name" class="form-control" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Subject</label>
+                                <input type="text" name="subject" class="form-control" placeholder="What's this about?" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Message</label>
+                                <textarea class="form-control" name="message" placeholder="Your message here..." rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">
+                                <i class="fas fa-paper-plane me-2"></i>Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Comments Section -->
+    <section id="comments" class="comments-section">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">💬 Leave a Comment</h2>
+            <div class="comments-wrapper" data-aos="fade-up" data-aos-delay="100">
+                <div class="comment-form-container">
+                    <form id="commentForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">Your Name</label>
+                                    <input type="text" class="form-control" id="commentName" placeholder="Enter your name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">Email (optional)</label>
+                                    <input type="email" class="form-control" id="commentEmail" placeholder="your@email.com">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Your Comment</label>
+                            <textarea class="form-control" id="commentText" rows="4" placeholder="Share your thoughts..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit" style="width: auto; padding: 12px 32px;">
+                            <i class="fas fa-comment"></i> Post Comment
+                        </button>
+                    </form>
+                </div>
+                <div class="comments-list-container mt-5">
+                    <h3 class="comments-heading"><i class="fas fa-comments"></i> What People Say</h3>
+                    <div id="commentsList" class="comments-list">
+                        <div class="text-center text-muted py-4">No comments yet. Be the first to leave a comment!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </main>
 
-<footer class="footer bg-dark text-white text-center py-4">
-    <p>&copy; 2025 Esha Sagar. All Rights Reserved.</p>
+<footer class="footer text-center py-4">
+    <div class="container">
+        <p>&copy; 2026 Esha Sagar. All Rights Reserved.</p>
+    </div>
 </footer>
 
-<!-- JS Scripts -->
+ <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+ <!-- AOS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script>AOS.init();</script>
+
+<script src="script.js"></script>
+
 
 </body>
 </html>
