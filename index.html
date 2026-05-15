@@ -547,26 +547,32 @@
                         </div>
                     </div>
                     <div class="col-lg-7 contact-form-wrapper" data-aos="fade-left">
-                        <form class="contact-form">
+                        <form class="contact-form" action="https://formspree.io/f/mykoqryz" method="POST">
+                            <input type="hidden" name="_subject" value="New Portfolio Message">
+                            <input type="hidden" name="_captcha" value="false">
                             <div class="form-group">
                                 <label class="form-label">Full Name</label>
-                                <input type="text" class="form-control" placeholder="Enter your name" required>
+                                <input type="text" name="name" class="form-control" placeholder="Enter your name" required>
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Email Address</label>
-                                <input type="email" class="form-control" placeholder="Enter your email" required>
+                                <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Subject</label>
-                                <input type="text" class="form-control" placeholder="What's this about?" required>
+                                <input type="text" name="subject" class="form-control" placeholder="What's this about?" required>
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Message</label>
-                                <textarea class="form-control" placeholder="Your message here..." rows="5" required></textarea>
+                                <textarea class="form-control" name="message" placeholder="Your message here..." rows="5" required></textarea>
                             </div>
                             <button type="submit" class="btn-submit">
                                 <i class="fas fa-paper-plane me-2"></i>Send Message
                             </button>
+                            <div id="successMessage" class="success-message">
+                                <i class="fas fa-circle-check"></i>
+                                Message sent successfully!
+                            </div>
                         </form>
                     </div>
                 </div>

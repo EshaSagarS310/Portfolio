@@ -98,15 +98,22 @@ AOS.init({ duration: 1000, once: true, offset: 100 });
     }
 
     // Contact form submission
-    document.querySelector('.contact-form').addEventListener('submit', function (e) {
-        e.preventDefault();
-        alert('Thank you for your message! I will get back to you soon.');
-        this.reset();
-    });
+    const contactForm = document.querySelector('.contact-form');
+    const successMessage = document.getElementById('successMessage');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function () {
 
-    // =====================================================
-    // FIX 3: Project modal — sets href + target="_blank"
-    // =====================================================
+            successMessage.classList.add('show-success');
+
+            setTimeout(() => {
+                successMessage.classList.remove('show-success');
+            }, 4000);
+        });
+    }
+
+
+    //Project modal
+  
     const projectModal = document.getElementById('projectModal');
     projectModal.addEventListener('show.bs.modal', function (event) {
         const button = event.relatedTarget;
@@ -132,9 +139,9 @@ AOS.init({ duration: 1000, once: true, offset: 100 });
         });
     });
 
-    // =====================================================
+    
     // FIX 4: Explore Project links — get GitHub URL from view-btn
-    // =====================================================
+    
     document.querySelectorAll('.modern-project-card').forEach(card => {
         const button      = card.querySelector('.view-btn');
         const exploreLink = card.querySelector('.project-link');
