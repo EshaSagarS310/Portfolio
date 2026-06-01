@@ -130,14 +130,6 @@ Multiple communication channels:
   * 🔗 Social media links
 
 
-### 💬 Comment System (Frontend Only)
-
-  * Users can post comments
-  * Stored using browser localStorage
-  * No database or server required
-  * Lightweight demo feature for interactivity
-
-
 ## 🛠️ Tech Stack
 
   ### 💻 Core Technologies
