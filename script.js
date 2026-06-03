@@ -1,8 +1,7 @@
 AOS.init({ duration: 1000, once: true, offset: 100 });
 
-    // =====================================================
+
     // FIX 1: Smooth scroll — skips empty/external hrefs
-    // =====================================================
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
@@ -69,9 +68,8 @@ AOS.init({ duration: 1000, once: true, offset: 100 });
         setTimeout(() => { clearTypingTimers(); index = 0; isTyping = true; currentText = ""; updateDisplay(); typeNextChar(); }, 300);
     }
 
-    // =====================================================
+   
     // FIX 2: contactBtn scrolls to #contact section
-    // =====================================================
     const contactBtn = document.getElementById('contactBtn');
     if (contactBtn) {
         contactBtn.addEventListener('click', function (e) {
@@ -113,7 +111,6 @@ AOS.init({ duration: 1000, once: true, offset: 100 });
 
 
     //Project modal
-  
     const projectModal = document.getElementById('projectModal');
     projectModal.addEventListener('show.bs.modal', function (event) {
         const button = event.relatedTarget;
@@ -140,7 +137,7 @@ AOS.init({ duration: 1000, once: true, offset: 100 });
     });
 
     
-    // FIX 4: Explore Project links — get GitHub URL from view-btn
+    // FIX 4: Explore Project links 
     
     document.querySelectorAll('.modern-project-card').forEach(card => {
         const button      = card.querySelector('.view-btn');
@@ -164,15 +161,16 @@ AOS.init({ duration: 1000, once: true, offset: 100 });
     const certificates = [
         { title: "GitHub Foundations",          img: "certificate/Github-certificate 24 Aug 2024.png" },
         { title: "AI for All",                   img: "certificate/AI for All Nov 22,2025.jpeg" },
-        { title: "Java Programming (Aug 2024)",  img: "certificate/Java 24,August,2024.png" },
-        { title: "Java Programming (Jan 2023)",  img: "certificate/Java Jan 2023.jpg" },
+        { title: "Java Programming",  img: "certificate/Java 24,August,2024.png" },
+        { title: "Java Programming",  img: "certificate/Java Jan 2023.jpg" },
         { title: "Naan Mudhalvan",               img: "certificate/NM Apr 15,2023.jpeg" },
-        { title: "NPTEL Cloud Computing",        img: "certificate/NPTEL CC Jan 2025.jpeg" },
-        { title: "NPTEL Intro to Algorithms",    img: "certificate/NPTEL Intro to Alg Jul 2025.jpeg" },
+        { title: "Cloud Computing",        img: "certificate/NPTEL CC Jan 2025.jpeg" },
+        { title: "Intro to Algorithms",    img: "certificate/NPTEL Intro to Alg Jul 2025.jpeg" },
         { title: "Pantech Data Science",         img: "certificate/Pantech DataScience 30 Days Nov 20,2022.jpeg" },
         { title: "Python for Beginners",         img: "certificate/Python Course Beg 15 Aug ,2024.png" },
         { title: "Python Data Science",          img: "certificate/Python Data Science Dec 29,2024.jpeg" },
         { title: "Web Development",              img: "certificate/Web Dev Nov 22,2025.jpeg" },
+        { title: "Enhancing Soft Skills",              img: "certificate/NPTEL SoftSkills.jpeg" },
     ];
 
     const gridContainer = document.getElementById('certificatesGrid');
@@ -247,75 +245,3 @@ AOS.init({ duration: 1000, once: true, offset: 100 });
 
     renderAllCertificates();
 
-    // Comments
-    (function () {
-        let comments = [];
-
-        function loadComments() {
-            const stored = localStorage.getItem('portfolioComments');
-            if (stored) { try { comments = JSON.parse(stored); } catch (e) { comments = []; } }
-            if (!comments.length) {
-                comments.push({ id: Date.now(), name: "Esha Sagar", email: "", text: "Welcome to my portfolio! Feel free to leave your feedback. 🚀", date: new Date().toISOString() });
-                saveComments();
-            }
-            renderComments();
-        }
-
-        function saveComments() { localStorage.setItem('portfolioComments', JSON.stringify(comments)); }
-
-        function addComment(name, email, text) {
-            comments.unshift({ id: Date.now(), name: name.trim(), email: email.trim(), text: text.trim(), date: new Date().toISOString() });
-            saveComments(); renderComments();
-        }
-
-        function deleteComment(id) { comments = comments.filter(c => c.id != id); saveComments(); renderComments(); }
-
-        function formatDate(d) {
-            const date = new Date(d);
-            return date.toLocaleDateString() + ' ' + date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-        }
-
-        function escapeHtml(str) {
-            if (!str) return '';
-            return str.replace(/[&<>]/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[m]));
-        }
-
-        function renderComments() {
-            const container = document.getElementById('commentsList');
-            if (!container) return;
-            if (!comments.length) {
-                container.innerHTML = '<div class="text-center text-muted py-4">No comments yet. Be the first to leave a comment!</div>';
-                return;
-            }
-            container.innerHTML = comments.map(c => `
-                <div class="comment-item" data-id="${c.id}">
-                    <div class="comment-header">
-                        <div class="comment-author"><i class="fas fa-user-circle"></i> ${escapeHtml(c.name)}</div>
-                        <div style="display:flex;align-items:center;gap:12px;">
-                            <span class="comment-date"><i class="far fa-calendar-alt"></i> ${formatDate(c.date)}</span>
-                            <button class="delete-comment" onclick="deleteCommentById(${c.id})" title="Delete"><i class="fas fa-trash-alt"></i></button>
-                        </div>
-                    </div>
-                    <div class="comment-text">${escapeHtml(c.text).replace(/\n/g, '<br>')}</div>
-                </div>
-            `).join('');
-        }
-
-        window.deleteCommentById = function (id) { if (confirm('Delete this comment?')) deleteComment(id); };
-
-        const form = document.getElementById('commentForm');
-        if (form) {
-            form.addEventListener('submit', function (e) {
-                e.preventDefault();
-                const name  = document.getElementById('commentName').value.trim();
-                const email = document.getElementById('commentEmail').value.trim();
-                const text  = document.getElementById('commentText').value.trim();
-                if (!name || !text) { alert('Please enter your name and comment.'); return; }
-                addComment(name, email, text);
-                form.reset();
-                alert('Comment posted!');
-            });
-        }
-
-        loadComments();
-    })();
