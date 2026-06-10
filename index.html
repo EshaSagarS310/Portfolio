@@ -3,560 +3,503 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esha Sagar | Portfolio</title>
-
-    <!-- CSS & Icons -->
-     
-    <!-- Bootstrap -->
+    <title>Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    
-     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-    
-    <!-- AOS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-        
-        <!-- Typed.js for animated heading -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-
 <header class="header">
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand logo" href="#">ESHA SAGAR</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto nav-links">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
+                <div class="navbar-nav ms-auto nav-links">
+                    <a class="nav-link" href="#home">Home</a>
+                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="#skills">Skills</a>
+                    <a class="nav-link" href="#projects">Projects</a>
+                    <a class="nav-link" href="#experience">Experience</a>
+                    <a class="nav-link" href="#certificates">Certificates</a>
+                    <a class="nav-link" href="#education">Education</a>
+                    <a class="nav-link" href="#contact">Contact</a>
+                </div>
+                <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle dark/light mode">
+                    <i class="fas fa-moon"></i>
+                </button>
             </div>
         </div>
     </nav>
 </header>
 
 <main>
-    <br><br>
-
-    <!-- HOME SECTION -->
-    <section id="home" class="home-section">
-        <div class="container home-container">
-            <div class="row align-items-center">
-                <div class="col-lg-6" data-aos="fade-right">
-                    <div class="home-content"><br><br>
-                        <span class="greeting">Hello, I'm</span>
-                        <div class="animated-heading">
-                            <span class="gradient-name" id="dynamicName"></span>
-                            <span class="type-cursor"></span>
-                        </div>
-                        <div class="title">Aspiring Web & Cloud Developer</div>
-                        <p class="description">
-                            Final-semester MCA student, with graduation approaching soon. Focused on web development and cloud technologies with a strong learning mindset. Building practical applications to strengthen problem-solving and development skills. Eager to contribute, learn continuously, and grow into a reliable developer.
-                        </p>
-                        <div class="btn-group">
-                            <a href="#contact" class="btn-primary-custom" id="contactBtn">
-                                <i class="fas fa-paper-plane"></i>
-                                Get In Touch
-                            </a>
-                            <a href="Esha Sagar_RESUME.pdf" download class="btn-outline-custom">
-                                <i class="fas fa-download"></i>
-                                Download CV
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <div class="profile-container">
-                        <div class="profile-image-wrapper"><br><br><br>
-                            <img src="profile/profile.png" alt="Esha Sagar" class="profile-image">
-                        </div>
-                    </div>
-                </div>
+    <section id="home" class="section hero-center">
+        <div class="container text-center"><br>
+            <p class="greeting" data-aos="fade-up">Hello, I'm</p>
+            <h1 class="display-3 fw-bold mt-2 mb-3" data-aos="fade-up" data-aos-delay="100">
+                Esha <span class="highlight">Sagar</span>
+            </h1>
+            <div class="typed-wrapper mb-4" data-aos="fade-up" data-aos-delay="200">
+                <span id="typed-text"></span>
             </div>
-        </div>
-        <div class="scroll-down">
-            <a href="#about"><i class="bi bi-chevron-double-down"></i></a>
+            <p class="lead mx-auto" style="max-width:580px;opacity:.85;" data-aos="fade-up" data-aos-delay="300">
+            Aspiring Software Developer passionate about Web Development, Machine Learning, and Cloud Technologies, with a strong foundation in programming and problem-solving.
+            </p>
+            <div class="custom-btn-group mt-4" data-aos="fade-up" data-aos-delay="400">
+                <a href="#contact" class="portfolio-btn portfolio-btn-primary">
+                    <span>Hire Me</span><i class="fas fa-paper-plane"></i>
+                </a>
+                <a href="#projects" class="portfolio-btn portfolio-btn-outline-light">
+                    <span>View Work</span><i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="Esha Sagar Resume.pdf" class="portfolio-btn portfolio-btn-outline-info" id="resumeBtn">
+                    <i class="fas fa-download"></i><span>Resume</span>
+                </a>
+            </div>
+            <div class="scroll-text mt-5" data-aos="fade-up" data-aos-delay="500">
+                <a href="#about">Scroll to explore <i class="fas fa-arrow-down ms-2"></i></a>
+            </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
+    <section id="about" class="section">
         <div class="container">
-            <div class="about-card" data-aos="fade-up">
-                <div class="light"></div>
-                <div class="light light2"></div>
-                <h2 class="section-title">📖 About Me</h2>
-                <div class="row align-items-center g-5">
-                    <div class="col-md-5 text-center" data-aos="fade-right">
-                        <div class="ratio-9x12" id="aboutImage">
+            <h2 class="about-heading" data-aos="fade-up">About Me</h2>
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5 text-center" data-aos="fade-right">
+                    <div class="attractive-image-container">
+                        <div class="attractive-glow-aura"></div>
+                        <div class="attractive-portrait-inner">
                             <img src="profile/profile.png" alt="Esha Sagar">
                         </div>
                     </div>
-                    <div class="col-md-7 about-text" data-aos="fade-left">
-                        <h3><span id="dynamic-heading"></span></h3>
-                        <p>I'm someone who enjoys exploring different areas of technology and turning ideas into real, working projects. From designing clean user interfaces to understanding how things work behind the scenes, I like being involved in the full process of building.</p>
-                        <p>Currently completed my MCA, I'm continuously learning and experimenting with new tools and technologies. I don't limit myself to just one domain—I enjoy trying, learning, and growing across different areas in tech.</p>
-                        <ul class="list-unstyled mt-4">
-                            <li><i class="fa-solid fa-code"></i> Interested in building practical and meaningful projects</li>
-                            <li><i class="fa-solid fa-lightbulb"></i> Curious mindset with a habit of exploring new technologies</li>
-                            <li><i class="fa-solid fa-users"></i> Comfortable working independently and in teams</li>
-                        </ul>
-                        <div class="quote"><i class="fas fa-quote-left"></i> I believe growth comes from exploring, experimenting, and building without limits.</div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left" data-aos-delay="150">
+                    <div class="mb-3">
+                        <span id="dynamic-heading" class="highlight fw-bold fs-4"></span>
+                    </div>
+                    <p class="lead fs-6 mb-4" style="opacity:.9; line-height: 1.7;">
+                    Passionate about Web Development, Machine Learning, and Cloud Technologies, I enjoy building innovative solutions that address real-world challenges. With hands-on experience in developing web applications and data-driven projects, I continuously strive to enhance my technical skills, embrace new technologies, and contribute to impactful and meaningful solutions.    
+                    </p>
+                    <div class="row g-3">
+                        <div class="col-6 col-md-3"><div class="kinetic-stat-card"><h4>9.72</h4><p>CGPA</p></div></div>
+                        <div class="col-6 col-md-3"><div class="kinetic-stat-card"><h4>2</h4><p>Internships</p></div></div>
+                        <div class="col-6 col-md-3"><div class="kinetic-stat-card"><h4>5+</h4><p>Projects</p></div></div>
+                        <div class="col-6 col-md-3"><div class="kinetic-stat-card"><h4>10+</h4><p>Certifications</p></div></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container" data-aos="fade-up">
+            <h2 class="about-heading">Skills</h2>
+            <div class="skills-filter-menu">
+                <button class="skill-filter-btn active" data-filter="all">All</button>
+                <button class="skill-filter-btn" data-filter="frontend">Frontend</button>
+                <button class="skill-filter-btn" data-filter="backend">Backend</button>
+                <button class="skill-filter-btn" data-filter="cloud-ml">Cloud &amp; ML</button>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-card-wrapper" data-category="frontend"><div class="skill-capsule-card"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div></div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-card-wrapper" data-category="frontend"><div class="skill-capsule-card"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div></div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-card-wrapper" data-category="frontend"><div class="skill-capsule-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div></div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-card-wrapper" data-category="frontend"><div class="skill-capsule-card"><i class="devicon-react-original colored"></i><span>React</span></div></div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-card-wrapper" data-category="frontend"><div class="skill-capsule-card"><i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></div></div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-card-wrapper" data-category="backend"><div class="skill-capsule-card"><i class="devicon-python-plain colored"></i><span>Python</span></div></div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-card-wrapper" data-category="backend"><div class="skill-capsule-card"><i class="devicon-java-plain colored"></i><span>Java</span></div></div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-card-wrapper" data-category="backend"><div class="skill-capsule-card"><i class="devicon-cplusplus-plain colored"></i><span>C++</span></span></div></div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-card-wrapper" data-category="backend"><div class="skill-capsule-card"><i class="devicon-php-plain colored"></i><span>PHP</span></div></div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-card-wrapper" data-category="backend"><div class="skill-capsule-card"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div></div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-card-wrapper" data-category="backend"><div class="skill-capsule-card"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div></div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-card-wrapper" data-category="backend"><div class="skill-capsule-card"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></div></div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-card-wrapper" data-category="cloud-ml"><div class="skill-capsule-card"><i class="devicon-amazonwebservices-plain-wordmark colored"></i><span>AWS</span></div></div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-card-wrapper" data-category="cloud-ml"><div class="skill-capsule-card"><i class="devicon-azure-plain colored"></i><span>Azure</span></div></div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-card-wrapper" data-category="cloud-ml"><div class="skill-capsule-card"><i class="fa-solid fa-brain"></i><span>Machine Learning</span></div></div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-card-wrapper" data-category="cloud-ml"><div class="skill-capsule-card"><i class="devicon-git-plain colored"></i><span>Git</span></div></div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-card-wrapper" data-category="cloud-ml"><div class="skill-capsule-card"><i class="devicon-github-original"></i><span>GitHub</span></div></div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-card-wrapper" data-category="cloud-ml"><div class="skill-capsule-card"><i class="devicon-vscode-plain colored"></i><span>VS Code</span></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container" data-aos="fade-up">
+            <h2 class="about-heading">Projects</h2>
+            <div class="row g-4 mt-2 justify-content-center" id="projects-grid">
+                <!--Project 1-->
+                <div class="col-sm-10 col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="project/FinGaurdAI.png" alt="Advanced Calculator">
+                        </div>
+                        <div class="project-card-body">
+                            <div class="project-badge-container">
+                                <span class="project-badge">Python</span>
+                                <span class="project-badge">Machine Learning</span>
+                                <span class="project-badge">Streamlit</span>
+                            </div>
+                            <h3 class="project-title">FinGuard AI</h3>
+                            <p class="project-description">Researched and developed an AI-powered corporate fraud detection system using ensemble learning and Explainable AI (SHAP/LIME), with a Streamlit-based analytics dashboard.</p>
+                            <div class="project-outcome">Outcome: Achieved 99.95% accuracy on 37K+ financial records, enabling reliable and explainable corporate fraud detection.</div>
+                            <div class="project-btn-group">
+                                <a href="https://github.com/EshaSagarS310/FinGuard-AI-Corporate-Fraud-Detection-Risk-Intelligence-Platform" target="_blank" class="portfolio-btn portfolio-btn-primary">
+                                    <i class="fab fa-github"></i><span>Code</span>
+                                </a>
+                                <a href="https://finguard-ai-corporate-fraud-detection-risk-intelligence-platfo.streamlit.app/" target="_blank" class="portfolio-btn portfolio-btn-outline-info">
+                                    <i class="fas fa-external-link-alt"></i><span>Demo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Project 2-->
+                <div class="col-sm-10 col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="project/Zero Touch Hotel.png" alt="PulseBeat">
+                        </div>
+                        <div class="project-card-body">
+                            <div class="project-badge-container">
+                                <span class="project-badge">HTML</span>
+                                <span class="project-badge">PHP</span>
+                                <span class="project-badge">MySQL</span>
+                                <span class="project-badge">Apache Server</span>
+                            </div>
+                            <h3 class="project-title">Zero Touch Hotel</h3>
+                            <p class="project-description">A smart contactless hotel management system that automates booking, payment, and room access using QR-code authentication and PHP/MySQL backend.</p>
+                            <div class="project-outcome">Outcome: Improved operational efficiency and guest experience by enabling secure, contactless booking, payment, and room access management.</div>
+                            <div class="project-btn-group">
+                                <a href="https://github.com/EshaSagarS310/Zero-Touch-Hotel-Smart-Entry-Exit-System" target="_blank" class="portfolio-btn portfolio-btn-primary">
+                                    <i class="fab fa-github"></i><span>Code</span>
+                                </a>
+                                <a href="https://zerotouchhotel.netlify.app/" target="_blank" class="portfolio-btn portfolio-btn-outline-info">
+                                    <i class="fas fa-external-link-alt"></i><span>Demo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Project 3-->
+                <div class="col-sm-10 col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="project/Tax Farud Dashboard.png" alt="Tax Fraud Dashboard">
+                        </div>
+                        <div class="project-card-body">
+                            <div class="project-badge-container">
+                                <span class="project-badge">Python</span>
+                                <span class="project-badge">Streamlit</span>
+                                <span class="project-badge">Machine Learning</span>
+                            </div>
+                            <h3 class="project-title">Tax Fraud Dashboard</h3>
+                            <p class="project-description">Machine Learning-powered fraud detection dashboard built with Python and Streamlit for analyzing corporate financial data, predicting tax fraud, and generating interactive visualizations.</p>
+                            <div class="project-outcome">Outcome: Developed an ML-based dashboard to detect tax fraud, visualize financial insights, and generate automated reports.</div>
+                            <div class="project-btn-group">
+                                <a href="https://github.com/EshaSagarS310/Corporate-Income-Tax-Fraud-Detection" target="_blank" class="portfolio-btn portfolio-btn-primary">
+                                    <i class="fab fa-github"></i><span>Code</span>
+                                </a>
+                                <a href="" target="_blank" class="portfolio-btn portfolio-btn-outline-info">
+                                    <i class="fas fa-external-link-alt"></i><span>Demo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Project 4-->
+                <div class="col-sm-10 col-md-6 col-lg-4 extended-project">
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="project/Music Player.png" alt="Zero Touch Hotel">
+                        </div>
+                        <div class="project-card-body">
+                            <div class="project-badge-container">
+                                <span class="project-badge">HTML</span>
+                                <span class="project-badge">CSS</span>
+                                <span class="project-badge">JavaScript</span>
+                            </div>
+                            <h3 class="project-title">PulseBeat — Music App</h3>
+                            <p class="project-description">Developed a responsive frontend music streaming app with glassmorphism UI, featuring music playback, playlists, favorites, and live search functionality.</p>
+                            <div class="project-outcome">Outcome: Improved user experience with a fast, responsive, and visually engaging music streaming interface.</div>
+                            <div class="project-btn-group">
+                                <a href="https://github.com/EshaSagarS310/Music-Player" target="_blank" class="portfolio-btn portfolio-btn-primary">
+                                    <i class="fab fa-github"></i><span>Code</span>
+                                </a>
+                                <a href="https://eshasagars310.github.io/Music-Player/" target="_blank" class="portfolio-btn portfolio-btn-outline-info">
+                                    <i class="fas fa-external-link-alt"></i><span>Demo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Project 5-->
+                <div class="col-sm-10 col-md-6 col-lg-4 extended-project">
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="project/Calculator.png" alt="FinGuard AI">
+                        </div>
+                        <div class="project-card-body">
+                            <div class="project-badge-container">
+                                <span class="project-badge">HTML</span>
+                                <span class="project-badge">CSS</span>
+                                <span class="project-badge">JavaScript</span>
+                            </div>
+                            <h3 class="project-title">Advanced Calculator</h3>
+                            <p class="project-description">Built a responsive scientific calculator web app with a modern glassmorphism UI, supporting basic and scientific functions, dark/light mode, and calculation history.</p>
+                            <div class="project-outcome">Outcome: Improved UI and JavaScript logic skills by building an interactive calculator with smooth performance and history support.</div>
+                            <div class="project-btn-group">
+                                <a href="https://github.com/EshaSagarS310/Calculator" target="_blank" class="portfolio-btn portfolio-btn-primary">
+                                    <i class="fab fa-github"></i><span>Code</span>
+                                </a>
+                                <a href="https://eshasagars310.github.io/Calculator/" target="_blank" class="portfolio-btn portfolio-btn-outline-info">
+                                    <i class="fas fa-external-link-alt"></i><span>Demo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="text-center mt-5">
+                <div class="load-more-container">
+                    <div class="btn-glow-aura"></div>
+                    <button class="portfolio-btn portfolio-btn-outline-info" id="loadMoreProjectsBtn" style="padding: 14px 40px; border-radius: 14px;">
+                        <span>View All Work</span><i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <div class="container" data-aos="fade-up">
+            <h2 class="about-heading">Where I've Worked</h2>
+            <div class="row g-5 justify-content-center">
+                <div class="col-md-6 col-lg-5">
+                    <div class="exp-card-modern">
+                        <div class="exp-icon-wrapper"><i class="fas fa-laptop-code"></i></div>
+                        <h3 class="exp-role">Frontend Development Intern</h3>
+                        <div class="exp-company">CodeAlpha</div>
+                        <div class="exp-date">19 Jun 2025 – 19 Jul 2025</div>
+                        <ul class="exp-bullet-list-modern">
+                         <li>Developed 3 frontend applications (scientific calculator, music player, portfolio layout) during a One-Month virtual internship.</li>
+                         <li>Built a feature-rich scientific calculator with advanced functions, keyboard support, and history tracking.</li>
+                         <li>Created a dynamic music player with playlist management, track controls, and smooth UI interactions.</li>
+                         <li>Designed a responsive portfolio layout with a clean and modular structure for project showcasing.</li>
+                         <li>Improved overall application usability through structured code and responsive interface design.</li>
+                        </ul>
+                        <div class="tech-stack-badge">
+                            <span class="tech-badge">HTML5</span>
+                            <span class="tech-badge">CSS3</span>
+                            <span class="tech-badge">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-5">
+                    <div class="exp-card-modern">
+                        <div class="exp-icon-wrapper"><i class="fas fa-brain"></i></div>
+                        <h3 class="exp-role">AI / ML Research Intern</h3>
+                        <div class="exp-company">Research Department (HITS)</div>
+                        <div class="exp-date">05 Aug 2025 – 05 Sep 2025</div>
+                        <ul class="exp-bullet-list-modern">    
+                         <li>Led a hybrid group internship project as Team Lead, driving end-to-end development of a corporate fraud detection system.</li>
+                         <li>Built a Streamlit dashboard with secure login and interactive visual analytics.</li>
+                         <li>Developed ML models to detect anomalies in corporate financial data.</li>
+                         <li>Handled data preprocessing and prepared datasets for accurate predictions.</li>
+                         <li>Managed team tasks, integration, and on-time project delivery.</li>
+                        </ul>
+                        <div class="tech-stack-badge">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Streamlit</span>
+                            <span class="tech-badge">Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     
-<section id="skills" class="skills-section">
-    <div class="container">
-
-        <h2 class="section-title text-center">
-            ⚙️ Tech Stack
-        </h2>
-
-        <p class="skills-subtitle text-center">
-            Technologies I use to build modern web applications and cloud solutions.
-        </p>
-
-        <div class="tech-grid">
-
-            <div class="tech-card">
-                <i class="fab fa-html5"></i>
-                <h4>HTML5</h4>
-            </div>
-
-            <div class="tech-card">
-                <i class="fab fa-css3-alt"></i>
-                <h4>CSS3</h4>
-            </div>
-
-            <div class="tech-card">
-                <i class="fab fa-js"></i>
-                <h4>JavaScript</h4>
-            </div>
-
-            <div class="tech-card">
-                <i class="fab fa-bootstrap"></i>
-                <h4>Bootstrap</h4>
-            </div>
-
-            <div class="tech-card">
-                <i class="fab fa-react"></i>
-                <h4>React</h4>
-            </div>
-
-            <div class="tech-card">
-                <i class="fab fa-node-js"></i>
-                <h4>Node.js</h4>
-            </div>
-
-            <div class="tech-card">
-                <i class="fab fa-php"></i>
-                <h4>PHP</h4>
-            </div>
-
-            <div class="tech-card">
-                <i class="fas fa-database"></i>
-                <h4>MySQL</h4>
-            </div>
-
-            <div class="tech-card">
-                <i class="fas fa-leaf"></i>
-                <h4>MongoDB</h4>
-            </div>
-
-            <div class="tech-card">
-                <i class="fab fa-aws"></i>
-                <h4>AWS</h4>
-            </div>
-
-            <div class="tech-card">
-                <i class="fab fa-docker"></i>
-                <h4>Docker</h4>
-            </div>
-
-            <div class="tech-card">
-                <i class="fab fa-git-alt"></i>
-                <h4>Git</h4>
-            </div>
-
-            <div class="tech-card">
-                <i class="fab fa-github"></i>
-                <h4>GitHub</h4>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section py-5">
-        <div class="container">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="main-title">⚡Featured Projects</h2>
-            </div>
-            <div class="row g-4">
-
-                <!-- PROJECT 1 -->
-                <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in">
-                    <div class="modern-project-card">
-                        <div class="project-image">
-                            <img src="project/Calculator.png" alt="">
-                            <div class="project-overlay">
-                                <button class="view-btn"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#projectModal"
-                                    data-title="Advanced Scientific Calculator"
-                                    data-desc="A modern, fully responsive Advanced Scientific Calculator web app featuring scientific functions, dark/light mode, glassmorphism UI, calculation history, keyboard support, smooth animations, and robust JavaScript-powered functionality. NOTE : Best viewed at 60–80% browser zoom for an optimized desktop experience."
-                                    data-tech="HTML,CSS3,Bootstrap,JavaScript"
-                                    data-link="https://github.com/EshaSagarS310/Calculator">
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span>HTML</span><span>CSS3</span><span>Bootstrap</span><span>JavaScript</span>
-                            </div>
-                            <h4>Advanced Calculator</h4>
-                            <p>Modern responsive Calculator with Glassmorphism UI, Dark/Light mode, scientific functions, keyboard support, history, and smooth animations — optimized for 60–80% browser zoom on desktop.</p>
-                            <div class="project-footer">
-                                <a href="#" class="explore-btn project-link" target="_blank">
-                                    Explore Project <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+    <section id="certificates" class="section">
+        <div class="container" data-aos="fade-up">
+            <h2 class="about-heading">Certifications &amp; Achievements</h2>
+            <p class="text-center mb-4" style="color:var(--text-muted);opacity:.8;">
+                <i class="fas fa-certificate"></i> Click any certificate to view in full quality — all credentials verified.
+            </p>
+            <div class="row g-4 justify-content-center" id="certificatesGrid">
                 </div>
-
-                <!-- PROJECT 2 -->
-                <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="modern-project-card">
-                        <div class="project-image">
-                            <img src="project/Music Player.png" alt="">
-                            <div class="project-overlay">
-                                <button class="view-btn"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#projectModal"
-                                    data-title="PulseBeat — Music Streaming App"
-                                    data-desc="PulseBeat is a modern frontend music streaming web app inspired by Spotify, featuring a glassmorphism neon UI, advanced music controls, playlists, favorites, live search, responsive design, and smooth animations — all powered entirely on the frontend using LocalStorage and static JSON data."
-                                    data-tech="HTML,CSS3,Bootstrap,JavaScript"
-                                    data-link="https://github.com/EshaSagarS310/Music-Player">
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span>HTML</span><span>CSS3</span><span>Bootstrap</span><span>JavaScript</span>
-                            </div>
-                            <h4>PulseBeat — Music App</h4>
-                            <p>PulseBeat is a futuristic frontend-only music streaming web app with a modern glassmorphism UI, advanced music player, playlists, favorites, live search, and a fully responsive design for a premium user experience.</p>
-                            <div class="project-footer">
-                                <a href="#" class="explore-btn project-link" target="_blank">
-                                    Explore Project <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PROJECT 3 -->
-                <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="modern-project-card">
-                        <div class="project-image">
-                            <img src="project/Tax Farud Dashboard.png" alt="">
-                            <div class="project-overlay">
-                                <button class="view-btn"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#projectModal"
-                                    data-title="Corporate Income Tax Fraud Detection Dashboard"
-                                    data-desc="An intelligent ML-powered analytics platform built with Python and Streamlit to detect potential corporate tax fraud through secure authentication, data preprocessing, predictive modeling, interactive data visualizations, data analytics, and automated report generation."
-                                    data-tech="Python, Streamlit, Pandas, NumPy, Scikit-learn, XGBoost, Plotly, Matplotlib, Seaborn, ReportLab, Random Forest, Logistic Regression, Machine Learning"
-                                    data-link="https://github.com/EshaSagarS310/Corporate-Income-Tax-Fraud-Detection">
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span>Python</span><span>Streamlit</span><span>Machine Learning</span>
-                            </div>
-                            <h4>Tax Fraud Dashboard</h4>
-                            <p>Machine Learning-powered fraud detection dashboard built with Python and Streamlit for analyzing corporate financial data, predicting tax fraud, and generating interactive visualization with analytics reports.</p>
-                            <div class="project-footer">
-                                <a href="#" class="explore-btn project-link" target="_blank">
-                                    Explore Project <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PROJECT 4 -->
-                <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="modern-project-card">
-                        <div class="project-image">
-                            <img src="project/Zero Touch Hotel.png" alt="">
-                            <div class="project-overlay">
-                                <button class="view-btn"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#projectModal"
-                                    data-title="Zero Touch Hotel – Smart Entry & Exit System"
-                                    data-desc="This project presents a smart contactless hotel management system that automates guest entry and exit processes using digital technologies. It allows users to book rooms online, upload identification documents, make payments, and access rooms through QR-code-based authentication without depending on manual reception procedures. The system improves efficiency, reduces waiting time and human errors, and provides a safer and more convenient experience for both guests and hotel staff through centralized digital management."
-                                    data-tech="HTML,CSS,JavaScript,PHP,MySQL,XAMPP,Apache HTTP Server,QR Code Generator,UPI Gateway,phpMyAdmin"
-                                    data-link="https://github.com/EshaSagarS310/Zero-Touch-Hotel-Smart-Entry-Exit-System">
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>XAMPP</span><span>Apache</span>
-                            </div>
-                            <h4>Zero Touch Hotel</h4>
-                            <p>This project develops a smart contactless hotel management system that automates booking, payment, and room access using digital technologies and QR-code authentication.</p>
-                            <div class="project-footer">
-                                <a href="#" class="explore-btn project-link" target="_blank">
-                                    Explore Project <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- PROJECT 5 -->
-                <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="modern-project-card">
-                        <div class="project-image">
-                            <img src="project/FinGaurdAI.png" alt="">
-                            <div class="project-overlay">
-                                <button class="view-btn"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#projectModal"
-                                    data-title="FinGuard AI – Corporate Fraud Detection & Explainable AI Platform"
-                                    data-desc="Published research and developed an explainable AI-driven corporate fraud detection platform using ensemble machine learning techniques to improve fraud identification accuracy and transparency. Built an interactive Streamlit-based solution with real-time risk prediction, XAI insights, and automated reporting."
-                                    data-tech="Python, Streamlit, Machine Learning, SMOTE, SHAP, LIME, XGBoost, Random Forest, Logistic Regression, Data Visualization, Data Analytics"
-                                    data-link="https://github.com/EshaSagarS310/FinGuard-AI-Corporate-Fraud-Detection-Risk-Intelligence-Platform">
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span>Python</span><span>Streamlit</span><span>Machine Learning</span><span>XAI</span>
-                            </div>
-                            <h4>FinGuard AI</h4>
-                            <p>Researched and developed an explainable AI-based corporate fraud detection system using ensemble machine learning and XAI techniques (SHAP, LIME) for accurate risk assessment.</p>
-                            <div class="project-footer">
-                                <a href="#" class="explore-btn project-link" target="_blank">
-                                    Explore Project <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-            </div>
         </div>
     </section>
 
-
-    <!-- PROJECT MODAL -->
-    <div class="modal fade" id="projectModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content custom-modal">
-                <div class="modal-header border-0">
-                    <h3 class="modal-title" id="modalTitle"></h3>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+    <div class="modal fade" id="certificateModal" tabindex="-1" aria-hidden="true"
+         data-bs-backdrop="true" data-bs-keyboard="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0 d-flex justify-content-between align-items-center">
+                    <h5 class="modal-title" id="modalCertTitle">Certificate</h5>
+                    <button type="button" class="modal-close-btn" data-bs-dismiss="modal" aria-label="Close">&#x2715;</button>
                 </div>
-                <div class="modal-body">
-                    <p id="modalDesc"></p>
-                    <div class="tech-stack mt-4">
-                        <h6>Technologies Used</h6>
-                        <div id="modalTech"></div>
+                <div class="modal-body pt-2">
+                    <div class="square-modal-img-container">
+                        <img id="modalCertImage" src="" alt="Certificate preview" class="img-fluid">
                     </div>
-                </div>
-                <div class="modal-footer border-0">
-                    <a href="#" target="_blank" id="modalLink" class="github-btn">
-                        View Github <i class="fa-brands fa-github"></i>
-                    </a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience-section">
-        <div class="container">
-            <h2 class="section-title text-center" data-aos="fade-up">💼 Work Experience</h2>
-            <div class="exp-grid">
-                <div class="exp-card" data-aos="fade-up" data-aos-delay="0">
-                    <div class="exp-icon"><i class="fas fa-code"></i></div>
-                    <div class="exp-role">Frontend Development Internship</div>
-                    <div class="exp-company"><i class="fas fa-building"></i> CodeAlpha</div>
-                    <div class="exp-duration"><i class="far fa-calendar-alt"></i> 20 June 2025 - 20 July 2025</div>
-                    <div class="exp-description">
-                        <ul>
-                            <li>Completed a 1-month Virtual Internship as a Frontend Developer.</li>
-                            <li>Built web projects including a Calculator, Portfolio Website, and Music Player.</li>
-                            <li>Used HTML, CSS, and JavaScript for development.</li>
-                            <li>Created responsive and well-structured web interfaces.</li>
-                            <li>Improved frontend development skills and coding practices.</li>
-                        </ul>
+
+    <section id="education" class="section">
+        <div class="container" style="max-width:1100px;" data-aos="fade-up">
+            <h2 class="about-heading">Education</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-sm-10 col-md-6 col-lg-3">
+                    <div class="exp-card-modern d-flex flex-column h-100">
+                        <div class="exp-icon-wrapper"><i class="fas fa-user-graduate"></i></div>
+                        <h3 class="exp-role fs-5">MCA</h3>
+                        <div class="exp-company">Hindustan Institute Of Technology And Science</div>
+                        <div class="exp-date">2024 – 2026</div>
+                        <p class="small flex-grow-1">Specialized in Cloud Computing with a focus on cloud architecture, virtualization, cloud security, and modern deployment technologies.</p>
+                        <hr class="education-divider">
+                        <div class="education-mark-line"><mark>9.72 CGPA</mark></div>
                     </div>
-                    <div class="exp-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bootstrap</span></div>
                 </div>
-                <div class="exp-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="exp-icon"><i class="fas fa-chalkboard-user"></i></div>
-                    <div class="exp-role">AI/ML Research Internship</div>
-                    <div class="exp-company"><i class="fas fa-university"></i> Hindustan Institute of Science and Technology</div>
-                    <div class="exp-duration"><i class="far fa-calendar-alt"></i> 05 August 2025 - 05 September 2025</div>
-                    <div class="exp-description">
-                        <ul>
-                            <li>Developed a web-based fraud detection dashboard using Streamlit.</li>
-                            <li>Implemented machine learning models (Random Forest, Logistic Regression, XGBoost).</li>
-                            <li>Performed data preprocessing, analysis, and visualization of corporate tax data.</li>
-                            <li>Generated insights with charts, reports, and export features (CSV/PDF).</li>
-                        </ul>
+                <div class="col-sm-10 col-md-6 col-lg-3">
+                    <div class="exp-card-modern d-flex flex-column h-100">
+                        <div class="exp-icon-wrapper"><i class="fas fa-graduation-cap"></i></div>
+                        <h3 class="exp-role fs-5">BCA</h3>
+                        <div class="exp-company">R.B.Gothi Jain College for Women</div>
+                        <div class="exp-date">2021 – 2024</div>
+                        <p class="small flex-grow-1">Studied programming, database management, data structures, and software development fundamentals under the University of Madras curriculum.</p>
+                        <hr class="education-divider">
+                        <div class="education-mark-line"><mark>8.7 CGPA</mark></div>
                     </div>
-                    <div class="exp-tech"><span>Python</span><span>Machine Learning</span><span>Streamlit</span></div>
+                </div>
+                <div class="col-sm-10 col-md-6 col-lg-3">
+                    <div class="exp-card-modern d-flex flex-column h-100">
+                        <div class="exp-icon-wrapper"><i class="fas fa-university"></i></div>
+                        <h3 class="exp-role fs-5">Intermediate School</h3>
+                        <div class="exp-company">Sri Jay Narayan Intermediate College</div>
+                        <div class="exp-date">2020 – 2021</div>
+                        <p class="small flex-grow-1">Uttar Pradesh State Board under studied Physics, Chemistry, and Mathematics (PCM), building a strong foundation in analytical and quantitative reasoning.</p>
+                        <hr class="education-divider">
+                        <div class="education-mark-line"><mark>75.6%</mark></div>
+                    </div>
+                </div>
+                <div class="col-sm-10 col-md-6 col-lg-3">
+                    <div class="exp-card-modern d-flex flex-column h-100">
+                        <div class="exp-icon-wrapper"><i class="fas fa-school"></i></div>
+                        <h3 class="exp-role fs-5">High School</h3>
+                        <div class="exp-company">Sri Jay Narayan Intermediate College</div>
+                        <div class="exp-date">2018 – 2019</div>
+                        <p class="small flex-grow-1">Uttar Pradesh State Board under studied a solid educational foundation across mathematics, science, and language studies during secondary schooling.</p>
+                        <hr class="education-divider">
+                        <div class="education-mark-line"><mark>72.5%</mark></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Certificates Section -->
-    <section id="certificates">
-        <div class="container certificates-section">
-            <h2 class="section-title" data-aos="fade-up">📜 Certifications & Achievements</h2>
-            <div class="cert-grid" id="certificatesGrid" data-aos="fade-up"></div>
-            <div class="footer-note">
-                <i class="fas fa-certificate"></i> Click on any certificate to view full image — all credentials verified.
-            </div>
-        </div>
-        <div id="lightboxModal" class="lightbox">
-            <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
-            <img class="lightbox-img" id="lightboxImage" alt="certificate preview">
-        </div>
-    </section>
+    <section id="contact" class="section">
+        <div class="container" style="max-width:920px;">
+            <h2 class="about-heading" data-aos="fade-up"> Let's Connect</h2>
+            <div class="contact-card" data-aos="fade-up">
+                <div class="row g-5 align-items-stretch">
+                    <div class="col-lg-6 d-flex flex-column justify-content-between contact-info">
+                        <div>
+                            <h3>Let's Connect</h3>
+                            <p class="lead-text mt-2">
+                                I'm always open to discussing new opportunities, creative ideas, or just having a friendly chat about technology.
+                            </p>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                                <div class="contact-details">
+                                    <h5>Email</h5>
+                                    <p>eshasagar3124@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="contact-details">
+                                    <h5>Location</h5>
+                                    <p>Chennai, Tamil Nadu</p>
+                                </div>
+                            </div>
 
-    <!-- Education Section -->
-    <section id="education" class="education-section">
-        <div class="container">
-            <h2 class="section-title text-center" data-aos="fade-up">🎓 Education Journey</h2>
-            <div class="education-grid">
-                <div class="education-card" data-aos="fade-up">
-                    <div class="education-icon"><i class="fas fa-user-graduate"></i></div>
-                    <h3 class="education-degree">Master of Computer Applications</h3>
-                    <p class="education-institution">Hindustan Institute Of Technology And Science (Deemed University)</p>
-                    <div class="education-details">Specialized in Cloud Computing, focusing on scalable Applications, Deployment, Web Development and Modern Technologies.</div>
-                    <div class="education-year">2024 - 2026</div>
-                    <div class="education-progress"><div class="progress"><div class="progress-bar" style="width: 97%"></div></div><div class="progress-text">Current CGPA: 9.72</div></div>
-                </div>
-                <div class="education-card" data-aos="fade-up" data-aos-delay="50">
-                    <div class="education-icon"><i class="fas fa-laptop-code"></i></div>
-                    <h3 class="education-degree">Bachelor of Computer Applications</h3>
-                    <p class="education-institution">R.B.Gothi Jain College for Women (Affiliated Madras University)</p>
-                    <div class="education-details">Built a strong foundation in Programming, Databases, and Core Computer Science principles.</div>
-                    <div class="education-year">2021 - 2024</div>
-                    <div class="education-progress"><div class="progress"><div class="progress-bar" style="width: 87%"></div></div><div class="progress-text">Final CGPA: 8.7</div></div>
-                </div>
-                <div class="education-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="education-icon"><i class="fas fa-school"></i></div>
-                    <h3 class="education-degree">Higher Secondary Education (12th Grade)</h3>
-                    <p class="education-institution">Uttar Pradesh State Board | Sri Jay Narayan Inter College, Ballia</p>
-                    <div class="education-details">Stream: Physics, Chemistry & Mathematics (PCM). Developed strong analytical and problem-solving skills.</div>
-                    <div class="education-year">2020 - 2021</div>
-                    <div class="education-progress"><div class="progress"><div class="progress-bar" style="width: 75.6%"></div></div><div class="progress-text">Percentage: 75.6%</div></div>
-                </div>
-                <div class="education-card" data-aos="fade-up" data-aos-delay="150">
-                    <div class="education-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <h3 class="education-degree">Secondary School Education (10th Grade)</h3>
-                    <p class="education-institution">Uttar Pradesh State Board | Sri Jay Narayan Inter College, Ballia</p>
-                    <div class="education-details">Successfully completed secondary education under UP Board. Developed a solid base in Science and Mathematics.</div>
-                    <div class="education-year">2018 - 2019</div>
-                    <div class="education-progress"><div class="progress"><div class="progress-bar" style="width: 72.5%"></div></div><div class="progress-text">Percentage: 72.5%</div></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container contact-container">
-            <h2 class="section-title text-center mb-5" data-aos="fade-up">📬 Get In Touch</h2>
-            <div class="contact-card">
-                <div class="row">
-                    <div class="col-lg-5 contact-info" data-aos="fade-right">
-                        <h4>Let's Connect</h4>
-                        <p>I'm always open to discussing new opportunities, creative ideas, or just having a friendly chat about technology.</p>
-                        <div class="contact-method">
-                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                            <div class="contact-details"><h5>Email</h5><p>eshasagar3124@gmail.com</p></div>
+                            <div class="contact-method">
+                                <div class="contact-icon"><i class="fas fa-business-time"></i></div>
+                                <div class="contact-details">
+                                    <h5>Availability</h5>
+                                    <p>Response within 24 Hours</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="contact-method">
-                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
-                            <div class="contact-details"><h5>Phone</h5><p>+91 93633 330945</p></div>
-                        </div>
-                        <div class="contact-method">
-                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                            <div class="contact-details"><h5>Location</h5><p>Chennai, Tamil Nadu</p></div>
-                        </div>
-                        <div class="social-links">&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="https://www.linkedin.com/in/esha-s-457a5325a/" class="social-link"><i class="fab fa-linkedin-in"></i></a>&nbsp;&nbsp;&nbsp;
-                            <a href="https://github.com/EshaSagarS310" class="social-link"><i class="fab fa-github"></i></a>&nbsp; &nbsp;&nbsp;
-                            <a href="https://www.instagram.com/nexyra212?igsh=ZXhveXJobmoyNzgw" class="social-link"><i class="fab fa-instagram"></i></a>
+                        
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/esha-s-457a5325a/" target="_blank" class="social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/EshaSagarS310" target="_blank" class="social-link" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.instagram.com/nexyra212" target="_blank" class="social-link" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
                         </div>
                     </div>
-                    <div class="col-lg-7 contact-form-wrapper" data-aos="fade-left">
-                        <form class="contact-form" action="https://formspree.io/f/mykoqryz" method="POST">
+                    
+                    <div class="col-lg-6">
+                        <form id="portfolioContactForm" class="contact-form h-100 d-flex flex-column justify-content-between" action="https://formspree.io/f/mykoqryz" method="POST">
                             <input type="hidden" name="_subject" value="New Portfolio Message">
                             <input type="hidden" name="_captcha" value="false">
+                            
                             <div class="form-group">
                                 <label class="form-label">Full Name</label>
                                 <input type="text" name="name" class="form-control" placeholder="Enter your name" required>
                             </div>
+                            
                             <div class="form-group">
                                 <label class="form-label">Email Address</label>
                                 <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
                             </div>
+                            
                             <div class="form-group">
                                 <label class="form-label">Subject</label>
                                 <input type="text" name="subject" class="form-control" placeholder="What's this about?" required>
                             </div>
-                            <div class="form-group">
+                            
+                            <div class="form-group mb-4">
                                 <label class="form-label">Message</label>
                                 <textarea class="form-control" name="message" placeholder="Your message here..." rows="5" required></textarea>
                             </div>
-                            <button type="submit" class="btn-submit">
-                                <i class="fas fa-paper-plane me-2"></i>Send Message
-                            </button>
+                            
+                            <div class="btn-submit-wrapper">
+                                <button type="submit" id="submitBtn" class="portfolio-btn portfolio-btn-primary btn-submit-custom">
+                                    <i class="fas fa-paper-plane"></i><span>Send Message</span>
+                                </button>
+                            </div>
+                            
                             <div id="successMessage" class="success-message">
-                                <i class="fas fa-circle-check"></i>
-                                Message sent successfully!
+                                <i class="fas fa-check-circle"></i> Message sent successfully!
                             </div>
                         </form>
                     </div>
@@ -564,23 +507,10 @@
             </div>
         </div>
     </section>
-
 </main>
 
-<footer class="footer text-center py-4">
-    <div class="container">
-        <p>&copy; 2026 Esha Sagar. All Rights Reserved.</p>
-    </div>
-</footer>
-
- <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
- <!-- AOS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
 <script src="script.js"></script>
-
-
 </body>
 </html>

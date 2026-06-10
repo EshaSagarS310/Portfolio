@@ -1,247 +1,175 @@
-AOS.init({ duration: 1000, once: true, offset: 100 });
 
+    // AOS Init
+    AOS.init({ duration: 800, once: true });
 
-    // FIX 1: Smooth scroll — skips empty/external hrefs
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const href = this.getAttribute('href');
-            if (!href || href === '#') return; // skip plain # links
-            const target = document.querySelector(href);
-            if (target) {
-                e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        });
+    // Typed strings
+    new Typed('#typed-text', {
+        strings: ['Web Developer','Cloud Computing Enthusiast','Machine Learning Learner','Frontend Developer'],
+        typeSpeed: 70, backSpeed: 40, loop: true
     });
-
-    // Navbar background on scroll
-    window.addEventListener('scroll', function () {
-        const header = document.querySelector('.header');
-        if (window.scrollY > 100) {
-            header.style.background = 'rgba(10, 10, 10, 0.98)';
-            header.style.boxShadow = '0 2px 30px rgba(0, 255, 255, 0.1)';
-        } else {
-            header.style.background = 'rgba(10, 10, 10, 0.95)';
-            header.style.boxShadow = 'none';
-        }
-    });
-
-    // Typing animation for name
-    const nameStr = "Esha Sagar";
-    const nameSpan = document.getElementById("dynamicName");
-    if (nameSpan) {
-        let currentText = "", index = 0, isTyping = true;
-        let timeoutId = null, pauseTimer = null;
-        const TYPE_SPEED = 100, ERASE_SPEED = 60, PAUSE_BEFORE_ERASE = 1500, PAUSE_BEFORE_RETYPE = 500;
-
-        function clearTypingTimers() {
-            if (timeoutId) { clearTimeout(timeoutId); timeoutId = null; }
-            if (pauseTimer) { clearTimeout(pauseTimer); pauseTimer = null; }
-        }
-        function updateDisplay() { nameSpan.textContent = currentText; }
-        function typeNextChar() {
-            if (!isTyping) return;
-            if (index < nameStr.length) {
-                currentText = nameStr.substring(0, index + 1);
-                updateDisplay(); index++;
-                timeoutId = setTimeout(typeNextChar, TYPE_SPEED);
-            } else {
-                currentText = nameStr; updateDisplay();
-                clearTypingTimers();
-                pauseTimer = setTimeout(() => { isTyping = false; eraseNextChar(); }, PAUSE_BEFORE_ERASE);
-            }
-        }
-        function eraseNextChar() {
-            if (isTyping) return;
-            if (index > 0) {
-                currentText = nameStr.substring(0, index - 1);
-                updateDisplay(); index--;
-                timeoutId = setTimeout(eraseNextChar, ERASE_SPEED);
-            } else {
-                currentText = ""; updateDisplay();
-                clearTypingTimers();
-                pauseTimer = setTimeout(() => {
-                    isTyping = true; index = 0; currentText = ""; updateDisplay(); typeNextChar();
-                }, PAUSE_BEFORE_RETYPE);
-            }
-        }
-        setTimeout(() => { clearTypingTimers(); index = 0; isTyping = true; currentText = ""; updateDisplay(); typeNextChar(); }, 300);
-    }
-
-   
-    // FIX 2: contactBtn scrolls to #contact section
-    const contactBtn = document.getElementById('contactBtn');
-    if (contactBtn) {
-        contactBtn.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-    }
-
-    // Typed.js for about section heading
     new Typed('#dynamic-heading', {
-        strings: ['Hi, I\'m Esha 👋', 'Exploring, Learning, and Building in Tech'],
-        typeSpeed: 50,
-        backSpeed: 30,
-        loop: true
+        strings: ["Hi, I'm Esha 👋","Exploring the Future of Technology","Learning • Building • Innovating","English · Hindi · Tamil"],
+        typeSpeed: 50, backSpeed: 30, loop: true
     });
 
-    // About image opens lightbox
-    const aboutImage = document.getElementById('aboutImage');
-    if (aboutImage) {
-        aboutImage.addEventListener('click', function () {
-            const imgSrc = this.querySelector('img').src;
-            openLightbox(imgSrc);
-        });
-    }
+    // Theme logic
+    const themeToggle = document.getElementById('themeToggle');
+    const toggleIcon  = themeToggle.querySelector('i');
 
-    // Contact form submission
-    const contactForm = document.querySelector('.contact-form');
-    const successMessage = document.getElementById('successMessage');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function () {
-
-            successMessage.classList.add('show-success');
-
-            setTimeout(() => {
-                successMessage.classList.remove('show-success');
-            }, 4000);
-        });
-    }
-
-
-    //Project modal
-    const projectModal = document.getElementById('projectModal');
-    projectModal.addEventListener('show.bs.modal', function (event) {
-        const button = event.relatedTarget;
-        const title = button.getAttribute('data-title');
-        const desc  = button.getAttribute('data-desc');
-        const tech  = button.getAttribute('data-tech');
-        const link  = button.getAttribute('data-link');
-
-        document.getElementById('modalTitle').innerText = title;
-        document.getElementById('modalDesc').innerText  = desc;
-
-        const modalLink = document.getElementById('modalLink');
-        modalLink.href = link;
-        modalLink.setAttribute('target', '_blank');
-        modalLink.setAttribute('rel', 'noopener noreferrer');
-
-        const techContainer = document.getElementById('modalTech');
-        techContainer.innerHTML = '';
-        tech.split(',').forEach(item => {
-            const span = document.createElement('span');
-            span.innerText = item.trim();
-            techContainer.appendChild(span);
-        });
-    });
-
-    
-    // FIX 4: Explore Project links 
-    
-    document.querySelectorAll('.modern-project-card').forEach(card => {
-        const button      = card.querySelector('.view-btn');
-        const exploreLink = card.querySelector('.project-link');
-        if (button && exploreLink) {
-            const githubLink = button.getAttribute('data-link');
-            if (githubLink) {
-                exploreLink.href = githubLink;
-                exploreLink.setAttribute('target', '_blank');
-                exploreLink.setAttribute('rel', 'noopener noreferrer');
-                // Prevent the smooth-scroll listener from swallowing the click
-                exploreLink.addEventListener('click', function (e) {
-                    e.stopPropagation();
-                    window.open(this.href, '_blank');
-                });
-            }
+    function applyTheme(isLight) {
+        document.body.classList.toggle('light-mode', isLight);
+        if (isLight) {
+            toggleIcon.className = 'fas fa-sun';
+        } else {
+            toggleIcon.className = 'fas fa-moon';
         }
+    }
+
+    applyTheme(localStorage.getItem('theme') === 'light');
+
+    themeToggle.addEventListener('click', () => {
+        const goLight = !document.body.classList.contains('light-mode');
+        localStorage.setItem('theme', goLight ? 'light' : 'dark');
+        applyTheme(goLight);
     });
 
-    // Certificates
+    // Filtering Stacks
+    document.querySelectorAll('.skill-filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.skill-filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const f = btn.dataset.filter;
+            document.querySelectorAll('.skill-card-wrapper').forEach(c =>
+                c.classList.toggle('hide', f !== 'all' && c.dataset.category !== f)
+            );
+        });
+    });
+
+    // Load projects grid logic
+    document.getElementById('loadMoreProjectsBtn')?.addEventListener('click', function () {
+        document.querySelectorAll('.extended-project').forEach(p => p.classList.add('show'));
+        AOS.refresh();
+        this.closest('.load-more-container').style.display = 'none';
+    });
+
+    // View tracking highlights
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    function updateActive() {
+        let cur = '';
+        sections.forEach(s => { if (window.scrollY >= s.offsetTop - 130) cur = s.id; });
+        navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + cur));
+    }
+    window.addEventListener('scroll', updateActive, { passive: true });
+    updateActive();
+
+    // Custom smooth anchor routing
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', function (e) {
+            const id = this.getAttribute('href');
+            if (id === '#') return;
+            const el = document.querySelector(id);
+            if (el) {
+                e.preventDefault();
+                window.scrollTo({ top: el.getBoundingClientRect().top + scrollY - 90, behavior: 'smooth' });
+            }
+        });
+    });
+
+    // Responsive collapse handle
+    const navCollapse = document.getElementById('navbarNav');
+    const bsNav = bootstrap.Collapse.getOrCreateInstance(navCollapse, { toggle: false });
+    navLinks.forEach(l => l.addEventListener('click', () => {
+        if (navCollapse.classList.contains('show')) bsNav.hide();
+    }));
+
+    // Resume click placeholder
+    // Resume click handle (Google Drive Cloud reference)
+    document.getElementById('resumeBtn')?.addEventListener('click', function(e) {
+    this.setAttribute('href', 'Esha Sagar.pdf');
+    this.setAttribute('target', '_blank'); // Opens your resume safely in a fresh browser tab
+    });
+
+    // Dynamic Certificates Array and Injection Setup
     const certificates = [
-        { title: "GitHub Foundations",          img: "certificate/Github-certificate 24 Aug 2024.png" },
-        { title: "AI for All",                   img: "certificate/AI for All Nov 22,2025.jpeg" },
-        { title: "Java Programming",  img: "certificate/Java 24,August,2024.png" },
-        { title: "Java Programming",  img: "certificate/Java Jan 2023.jpg" },
-        { title: "Naan Mudhalvan",               img: "certificate/NM Apr 15,2023.jpeg" },
-        { title: "Cloud Computing",        img: "certificate/NPTEL CC Jan 2025.jpeg" },
-        { title: "Intro to Algorithms",    img: "certificate/NPTEL Intro to Alg Jul 2025.jpeg" },
-        { title: "Pantech Data Science",         img: "certificate/Pantech DataScience 30 Days Nov 20,2022.jpeg" },
-        { title: "Python for Beginners",         img: "certificate/Python Course Beg 15 Aug ,2024.png" },
-        { title: "Python Data Science",          img: "certificate/Python Data Science Dec 29,2024.jpeg" },
-        { title: "Web Development",              img: "certificate/Web Dev Nov 22,2025.jpeg" },
-        { title: "Enhancing Soft Skills",              img: "certificate/NPTEL SoftSkills.jpeg" },
+        { title: "Python Using AI ",img: "certificate/AI for Techies 2026.jpeg" },
+        { title: "IEEE Research Paper",img: "certificate/IEEE Research Paper 2026.jpeg" },
+        { title: "Soft Skills and Personality",img: "certificate/NPTEL SoftSkills 2026.jpeg" },
+        { title: "Career Essentials in Gen AI",img: "certificate/Career Essentials Linkedin 2026.jpeg" },
+        { title: "Introduction To Python",img: "certificate/Intro Of Python SA 2025.jpeg" },
+        { title: "Datasience for Everyone",img: "certificate/Datascience For Everyone 2025.jpeg" },
+        { title: "AI for All",img: "certificate/AI for All 2025.jpeg" },
+        { title: "Web Design & Development",img: "certificate/Web Dev 2025.jpeg" },
+        { title: "Cloud Computing Concept",img: "certificate/Cloud Computing Linkedin 2025.jpeg" },
+        { title: "Intro to Algorithm & Analysis",img: "certificate/NPTEL Intro to Alg 2025.jpeg" },
+        { title: "HITS AI/ML Internship",img: "certificate/HITS Intership 2025.jpeg" },
+        { title: "CodeAlpha Intership",img: "certificate/CodeAlpha Online Intern 2025.jpg" },
+        { title: "Cloud Computing",img: "certificate/NPTEL Cloud Computing 2025.jpeg" },
+        { title: "MongoDB Basic for Student",img: "certificate/MongoDB Badge.png" },
+        { title: "AWS Educate Badge",img: "certificate/AWS Educate Badge.png" },
+        { title: "Python Libraries for DataScience",img: "certificate/Python Data Science 2024.jpeg" },
+        { title: "GitHub Bootcamp Course",img: "certificate/Github 2024.png" },
+        { title: "Scaler Java Course",img: "certificate/Scaler Java 2024.png" },
+        { title: "Scaler Python Beginner",img: "certificate/Python Course Beginner 2024.png" },
+        { title: "Naan Mudhalvan MicroSoft Office",img: "certificate/NM MS365 2023.jpeg" },
+        { title: "Great Learning Java Programming",img: "certificate/GL Java 2023.jpg" },
+        { title: "Pantech E-learning DataScience ",img: "certificate/Pantech DataScience 2022.jpeg" }
     ];
 
-    const gridContainer = document.getElementById('certificatesGrid');
+    const certificatesGrid = document.getElementById('certificatesGrid');
+    const certModal  = new bootstrap.Modal(document.getElementById('certificateModal'));
+    const modalImg   = document.getElementById('modalCertImage');
+    const modalTitle = document.getElementById('modalCertTitle');
 
-    function renderAllCertificates() {
-        if (!gridContainer) return;
-        gridContainer.innerHTML = '';
-        certificates.forEach((cert, idx) => {
-            const card = document.createElement('div');
-            card.className = 'cert-card';
-            card.setAttribute('data-aos', 'fade-up');
-            card.setAttribute('data-aos-delay', (idx % 5 * 50).toString());
-            card.innerHTML = `
-                <div class="cert-img-wrapper">
-                    <img src="${cert.img}" class="cert-img" alt="${cert.title}" loading="lazy">
-                    <div class="img-overlay">
-                        <button class="view-btn" data-img-src="${cert.img}">🔍 View Certificate</button>
-                    </div>
-                </div>
-                <div class="cert-info">
-                    <div class="cert-title">${cert.title}</div>
-                </div>
-            `;
-            gridContainer.appendChild(card);
+    // Build the certificates layout programmatically 
+    certificates.forEach((cert) => {
+        const col = document.createElement('div');
+        col.className = 'col-sm-6 col-md-4 col-lg-3';
+        
+        col.innerHTML = `
+            <div class="certificate-gallery-item">
+                <img class="certificate-img" src="${cert.img}" alt="${cert.title}">
+                <div class="certificate-title">${cert.title}</div>
+            </div>
+        `;
+
+        // Handle Click Event directly via JS to activate the Bootstrap Lightbox Modal Preview
+        col.querySelector('.certificate-gallery-item').addEventListener('click', () => {
+            modalImg.src = cert.img;
+            modalTitle.innerText = cert.title;
+            certModal.show();
         });
-        attachLightboxEvents();
-        AOS.refresh();
-    }
 
-    window.openLightbox = function (imageSrc) {
-        const lightbox    = document.getElementById('lightboxModal');
-        const lightboxImg = document.getElementById('lightboxImage');
-        lightboxImg.src   = imageSrc;
-        lightbox.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    };
+        certificatesGrid.appendChild(col);
+    });
 
-    window.closeLightbox = function () {
-        document.getElementById('lightboxModal').classList.remove('active');
-        document.body.style.overflow = '';
-    };
+    // AJAX post pipeline handling
+    const contactForm = document.getElementById('portfolioContactForm');
+    const successMsg  = document.getElementById('successMessage');
+    const submitBtn   = document.getElementById('submitBtn');
 
-    function attachLightboxEvents() {
-        document.querySelectorAll('.cert-card .view-btn').forEach(btn => {
-            btn.removeEventListener('click', btn._listener);
-            const handler = (e) => {
-                e.stopPropagation();
-                const imgSrc = btn.getAttribute('data-img-src');
-                if (imgSrc) openLightbox(imgSrc);
-            };
-            btn.addEventListener('click', handler);
-            btn._listener = handler;
-        });
-        document.querySelectorAll('.cert-card').forEach(card => {
-            card.removeEventListener('click', card._cardClick);
-            const cardClickHandler = (e) => {
-                if (!e.target.closest('.view-btn')) {
-                    const imgElem = card.querySelector('.cert-img');
-                    if (imgElem && imgElem.src) openLightbox(imgElem.src);
-                }
-            };
-            card.addEventListener('click', cardClickHandler);
-            card._cardClick = cardClickHandler;
-        });
-    }
-
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
-    const lightboxModal = document.getElementById('lightboxModal');
-    if (lightboxModal) {
-        lightboxModal.addEventListener('click', (e) => { if (e.target === lightboxModal) closeLightbox(); });
-    }
-
-    renderAllCertificates();
-
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        submitBtn.disabled = true;
+        const baseHtml = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>Sending...</span>';
+        
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: { 'Accept': 'application/json' }
+            });
+            if (response.ok) {
+                successMsg.style.display = 'flex';
+                contactForm.reset();
+            } else {
+                alert('Oops! Submission error pipeline. Re-verify connectivity attributes.');
+            }
+        } catch (error) {
+            alert('Network execution dropped.');
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = baseHtml;
+        }
+    });
